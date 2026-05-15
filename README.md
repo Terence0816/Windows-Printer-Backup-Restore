@@ -43,7 +43,10 @@ Windows Printer Backup Restore 是一個用於備份與還原 Windows 本機印�
 
 ### 下載
 
-- [PrtBAK_BackupRestore_v1.0.0.0.exe](./downloads/PrtBAK_BackupRestore_v1.0.0.0.exe)
+目前版本：`v1.0.0.0`
+
+- [前往 Releases / 發行版本頁面](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
+- [直接下載 PrtBAK_BackupRestore_v1.0.0.0.exe](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.0.0.0/PrtBAK_BackupRestore_v1.0.0.0.exe)
 
 ### 授權
 
@@ -94,7 +97,10 @@ It is designed for IT technicians, system administrators, and users who need to 
 
 ### Download
 
-- [PrtBAK_BackupRestore_v1.0.0.0.exe](./downloads/PrtBAK_BackupRestore_v1.0.0.0.exe)
+Current version: `v1.0.0.0`
+
+- [Open the Releases page](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
+- [Download PrtBAK_BackupRestore_v1.0.0.0.exe directly](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.0.0.0/PrtBAK_BackupRestore_v1.0.0.0.exe)
 
 ### License
 
