@@ -20,10 +20,24 @@
 - **備份驅動程式與連接埠**：包含印表機驅動、TCP/IP 或 USB 連接埠資訊。
 - **備份印表機設定**：支援匯出與匯入印表機偏好設定。
 - **預設印表機還原**：備份時記錄原本的預設印表機，還原時若條件符合會一併恢復。
+- **中英雙語介面**：支援繁體中文與 English，並依系統語系自動決定預設語言。
+- **可選擇還原的印表機**：還原前可勾選要還原的印表機，預設全選。
+- **顯示型號與連接埠資訊**：還原清單會顯示印表機名稱、型號或驅動、連接埠。
+- **指定預設印表機**：還原時可選一台作為預設印表機，也可選擇不變更。
 - **略過常見虛擬印表機**：例如 Microsoft Print to PDF、OneNote、Adobe PDF 等。
 - **支援網路路徑執行**：可從網路分享路徑執行 EXE 進行備份與還原。
-- **繁體中文介面**：提供繁體中文操作視窗與訊息提示。
-- **可攜式 EXE**：免安裝，單一執行檔即可使用。
+- **已數位簽章 EXE**：提供已完成數位簽章的可攜式執行檔。
+
+### 🆕 今日更新
+
+更新日期：`2026-05-17`
+
+- 新增繁體中文 / English 切換按鈕。
+- 啟動時會自動偵測系統語系，繁中系統預設繁中，其餘預設 English。
+- 還原前可選擇要還原哪幾台印表機，預設全選。
+- 還原清單新增印表機名稱、型號或驅動、連接埠顯示。
+- 新增「預設印表機」勾選欄位，只能選一台，也可不指定。
+- 發布 `v1.1.0.0` 數位簽章 EXE。
 
 ### 🚀 使用方式
 
@@ -39,14 +53,15 @@
 1. 在目標電腦上以 **系統管理員身分** 執行工具。
 2. 確認 `PrinterBackup` 資料夾放在工具旁邊。
 3. 選擇 `還原印表機設定到本機`。
-4. 工具會盡可能還原印表機、連接埠、驅動程式、印表機設定與預設印表機。
+4. 先勾選要還原的印表機，必要時指定預設印表機。
+5. 工具會盡可能還原印表機、連接埠、驅動程式、印表機設定與預設印表機。
 
 ### 📦 下載
 
-目前版本：`v1.0.0.0`
+目前版本：`v1.1.0.0`
 
 - [前往 Releases / 發行版本頁面](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
-- [直接下載 PrtBAK_BackupRestore_v1.0.0.0.exe](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.0.0.0/PrtBAK_BackupRestore_v1.0.0.0.exe)
+- [直接下載 PrtBAK_BackupRestore_v1.1.0.0.exe](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.1.0.0/PrtBAK_BackupRestore_v1.1.0.0.exe)
 
 ### ⚠️ 注意事項
 
@@ -75,10 +90,24 @@ The tool can back up printer drivers, ports, printer preferences, and the origin
 - **Backup drivers and ports**: Includes printer drivers and TCP/IP or USB port information.
 - **Backup printer settings**: Supports exporting and importing printer preferences.
 - **Restore default printer**: Records the original default printer during backup and restores it when possible.
+- **Bilingual interface**: Supports Traditional Chinese and English, with automatic default language detection based on the system UI language.
+- **Selectable restore list**: Choose which printers to restore before the restore process starts.
+- **Model and port display**: The restore list shows printer name, model or driver, and port.
+- **Default printer choice**: You can mark one restored printer as the default printer, or leave the current system default unchanged.
 - **Skip common virtual printers**: Such as Microsoft Print to PDF, OneNote, and Adobe PDF.
 - **Network-path friendly**: Can run from a shared network path for both backup and restore.
-- **Traditional Chinese interface**: Dialogs and UI messages are provided in Traditional Chinese.
-- **Portable EXE**: No installation required.
+- **Digitally signed EXE**: Includes a digitally signed portable executable.
+
+### 🆕 Today's Update
+
+Updated on `2026-05-17`
+
+- Added a Traditional Chinese / English language toggle button.
+- Added automatic startup language detection: Traditional Chinese systems default to Traditional Chinese, all others default to English.
+- Added printer selection before restore, with all printers selected by default.
+- Added restore-list columns for printer name, model or driver, and port.
+- Added a single-choice `Default Printer` option, with support for leaving the current system default unchanged.
+- Released the digitally signed `v1.1.0.0` EXE.
 
 ### 🚀 Usage
 
@@ -94,14 +123,15 @@ The tool can back up printer drivers, ports, printer preferences, and the origin
 1. Run the tool as **Administrator** on the target computer.
 2. Make sure the `PrinterBackup` folder is placed next to the tool.
 3. Choose `還原印表機設定到本機`.
-4. The tool restores printers, ports, drivers, printer settings, and the default printer as much as possible.
+4. Select the printers you want to restore and choose a default printer if needed.
+5. The tool restores printers, ports, drivers, printer settings, and the default printer as much as possible.
 
 ### 📦 Download
 
-Current version: `v1.0.0.0`
+Current version: `v1.1.0.0`
 
 - [Open the Releases page](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
-- [Download PrtBAK_BackupRestore_v1.0.0.0.exe directly](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.0.0.0/PrtBAK_BackupRestore_v1.0.0.0.exe)
+- [Download PrtBAK_BackupRestore_v1.1.0.0.exe directly](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.1.0.0/PrtBAK_BackupRestore_v1.1.0.0.exe)
 
 ### ⚠️ Notes
 
