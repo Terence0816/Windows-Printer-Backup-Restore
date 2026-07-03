@@ -1,148 +1,365 @@
-![Downloads](https://img.shields.io/github/downloads/Terence0816/Windows-Printer-Backup-Restore/total?label=Downloads&color=success)
-![Release](https://img.shields.io/github/v/release/Terence0816/Windows-Printer-Backup-Restore?label=Release&color=blue)
+# Windows Printer Backup Restore
 
-# 🖨️ Windows Printer Backup Restore
+Lightweight Windows printer backup and restore utility for Windows 7 / 10 / 11.
 
-**[🇺🇸 English](#-english-introduction) | [🇹🇼 繁體中文](#-繁體中文介紹)**
+![Downloads](https://img.shields.io/github/downloads/Terence0816/Windows-Printer-Backup-Restore/total?label=Downloads)
+![Release](https://img.shields.io/github/v/release/Terence0816/Windows-Printer-Backup-Restore?label=Release)
+[Releases](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases) |
+[Latest Build v1.2.0.0](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/tag/v1.2.0.0) |
+[MIT License](LICENSE)
+
+English | [繁體中文](#繁體中文)
+
+![Windows Printer Backup Restore English Cover](assets/screenshots/cover-en.jpg)
+
+Windows Printer Backup Restore is a lightweight **Windows printer backup and restore utility**.
+
+It is designed for IT administrators, support engineers, MSP service providers, and users who need to back up local printers and restore them to another Windows computer.
+
+Version `v1.2.0.0` is a major update rebuilt with native C++.  
+This version improves the backup and restore workflow, adds a more intuitive graphical interface, supports Traditional Chinese / English language switching, and improves compatibility and stability for Windows 7 / 10 / 11.
+
+## Version History
+
+### v1.2.0.0
+
+* Rebuilt Windows Printer Backup Restore with native C++.
+* Improved the main graphical operation interface.
+* Added Traditional Chinese / English language switching.
+* Improved local printer backup workflow.
+* Improved printer restore workflow.
+* Added selectable local printer backup list.
+* Improved printer name, driver / model, and port information display.
+* Improved backup and restore stability.
+* Improved handling of printer drivers, ports, printer preferences, and default printer information.
+* Improved virtual printer filtering.
+* Improved backup data detection and restore process.
+* Supports Windows 7 / 10 / 11.
+
+### v1.1.1.0
+
+* Added three restore modes for shared `\\server\share` printers:
+  * Original connection
+  * Local Port
+  * LPR Port
+* Shared-printer restore installs the backed-up driver first before connecting or creating the printer.
+* Improved shared-printer path handling.
+* Improved Local Port and LPR Port restore flow.
+* Released signed portable executable.
+
+## Highlights
+
+* Native C++ implementation
+* Lightweight single executable
+* No installation required
+* Backup local physical printers
+* Restore printers to another Windows computer
+* Backup printer drivers
+* Backup TCP/IP, USB, Local Port, and LPR Port information
+* Backup printer preferences
+* Restore printer preferences
+* Restore the original default printer when possible
+* Select which printers to back up or restore
+* Display printer name, driver / model, and port information
+* Skip common virtual printers automatically
+* Traditional Chinese and English interface
+* Designed for Windows 7 / 10 / 11
+
+## How to Use
+
+### 1. Run as Administrator
+
+Run `PrtEasyBAK.exe` as **Administrator**.
+
+Printer backup and restore operations may require administrator permission.
+
+### 2. Choose an Operation
+
+On the main screen, choose one of the following options:
+
+* **Backup**: Backup local printers from this computer.
+* **Restore**: Restore printers from the `PrinterBackup` folder to this computer.
+* **Cancel**: Exit the program.
+
+### 3. Backup Local Printers
+
+When backing up printers, the tool lists available local physical printers.
+
+Common virtual printers are automatically skipped and will not appear in the list.
+
+You can select which printers to back up before starting the backup process.
+
+The backup process stores printer-related information such as:
+
+* Printer name
+* Driver / model
+* Port information
+* Printer preferences
+* Default printer information
+
+### 4. Restore Printers
+
+To restore printers on another computer:
+
+1. Copy the whole `PrinterBackup` folder to the target computer.
+2. Place the `PrinterBackup` folder next to `PrtEasyBAK.exe`.
+3. Run `PrtEasyBAK.exe` as Administrator.
+4. Choose **Restore**.
+5. Select the printers you want to restore.
+6. Confirm and start the restore process.
+
+## Backup Folder
+
+The tool creates and uses the following folder:
+
+```text
+PrinterBackup
+```
+
+Please keep the entire `PrinterBackup` folder when moving the backup to another computer.
+
+## Supported Printer Information
+
+The tool is designed to back up and restore as much printer information as possible, including:
+
+* Printer drivers
+* Printer ports
+* TCP/IP printer port information
+* USB printer port information
+* Local Port information
+* LPR Port information
+* Printer preferences
+* Default printer information
+
+## Screenshots
+
+
+
+### English Interface
+
+![Windows Printer Backup Restore English Interface](assets/screenshots/screenshot-en1.png)
+
+![Windows Printer Backup Restore English Interface](assets/screenshots/screenshot-en2.png)
+
+## Download
+
+* Release page: [Releases](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
+* Latest build: [Windows Printer Backup Restore v1.2.0.0](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/tag/v1.2.0.0)
+
+Release assets usually include:
+
+```text
+PrtEasyBAK.exe
+PrtEasyBAK.exe.sha256.txt
+```
+
+## SHA-256
+
+```text
+PrtEasyBAK.exe
+342edbf44e721f13c4f2a20fefee82beb40f620a70d4267199cd58bf97a3fe4d
+```
+
+## Notes
+
+* Please run this program as Administrator.
+* Please test in your own environment before large-scale deployment.
+* Some printer preferences may still depend on the printer driver version and Windows version.
+* USB printers may still need to be reconnected or manually confirmed after restore.
+* Network shared printers may require the original print server to remain available.
+* Because this is a newly released executable, Windows Defender SmartScreen or antivirus software may show an uncommon app warning.
+* Please download only from the official GitHub Releases page.
+
+## Search Keywords
+
+Windows printer backup, Windows printer restore, printer migration tool, printer backup restore, printer driver backup, printer port backup, printer preference backup, printer preference restore, PrinterBackup, TCP/IP printer backup, USB printer backup, Local Port printer, LPR Port printer, Windows 7 printer backup, Windows 10 printer backup, Windows 11 printer backup, MSP printer tool, IT printer maintenance
+
+## Disclaimer
+
+This software is provided as-is.
+
+The author does not guarantee full compatibility with every printer, driver, or Windows environment.
+
+Please use this tool only on computers you own or have permission to maintain.
+
+## License
+
+This repository is released under the MIT License. See [LICENSE](LICENSE).
 
 ---
 
-## 🇹🇼 繁體中文介紹
+# 繁體中文
 
-**Windows Printer Backup Restore** 是一個用於備份與還原 Windows 本機印表機的輕量化工具，適合 **IT 管理員**、**系統維護人員**，以及需要將印表機設定從一台電腦移轉到另一台電腦的使用者。
+![Windows Printer Backup Restore 繁體中文封面](assets/screenshots/cover-zh-tw.jpg)
 
-它可以將印表機驅動程式、連接埠、印表機設定與預設印表機資訊一起備份，並在另一台 Windows 電腦上盡可能自動還原。
+Windows Printer Backup Restore 是一套輕量化的 **Windows 印表機備份與還原工具**。
 
-### ✨ 主要功能
+本工具適合 IT 管理員、系統維護人員、MSP 維護商，以及需要將印表機設定從一台電腦移轉到另一台電腦的使用者。
 
-- **備份本機實體印表機**：自動備份本機已安裝的實體印表機。
-- **還原到另一台 Windows 電腦**：可將備份資料帶到其他電腦進行還原。
-- **備份驅動程式與連接埠**：包含印表機驅動、TCP/IP、USB、Local Port 與 LPR Port 資訊。
-- **備份印表機設定**：支援匯出與匯入印表機偏好設定。
-- **預設印表機還原**：備份時記錄原本的預設印表機，還原時若條件符合會一併恢復。
-- **中英雙語介面**：支援繁體中文與 English，並依系統語系自動決定預設語言。
-- **可選擇還原的印表機**：還原前可勾選要還原的印表機，預設全選。
-- **顯示型號與連接埠資訊**：還原清單會顯示印表機名稱、型號或驅動、連接埠。
-- **指定預設印表機**：還原時可選一台作為預設印表機，也可選擇不變更。
-- **共享印表機三種還原模式**：遇到 `\\server\share` 時，可選擇原始連接、Local Port 或 LPR Port 方式還原。
-- **略過常見虛擬印表機**：例如 Microsoft Print to PDF、OneNote、Adobe PDF 等。
-- **支援網路路徑執行**：可從網路分享路徑執行 EXE 進行備份與還原。
-- **已數位簽章 EXE**：提供已完成數位簽章的可攜式執行檔。
+`v1.2.0.0` 是一次較大的更新版本。  
+本版已改用原生 C++ 全新重製，改善備份與還原流程，加入更直覺的圖形化操作介面，支援繁體中文 / English 介面切換，並提升 Windows 7 / 10 / 11 環境下的相容性與穩定度。
 
-### 🆕 今日更新
+## 版本更新紀錄
 
-更新日期：`2026-06-02`
+### v1.2.0.0
 
-- 共享印表機 `\\server\share` 還原時，新增三種模式可選：原始連接、Local Port、LPR Port。
-- 共享印表機還原前會先安裝備份的驅動程式，再進行後續連接或建立。
-- 改善共享印表機的路徑解析，會更準確使用原始伺服器與分享名稱。
-- 調整 Local Port 與 LPR Port 的還原流程，讓共享印表機更容易在另一台電腦建立成功。
-- 發布 `v1.1.1.0` 數位簽章 EXE。
+* 使用原生 C++ 全新重製 Windows Printer Backup Restore。
+* 改善主操作介面。
+* 新增繁體中文 / English 介面切換。
+* 改善本機印表機備份流程。
+* 改善印表機還原流程。
+* 新增可勾選的本機印表機備份清單。
+* 改善印表機名稱、驅動 / 型號、連接埠資訊顯示。
+* 強化備份與還原穩定度。
+* 強化印表機驅動程式、連接埠、印表機偏好設定與預設印表機資訊處理。
+* 改善虛擬印表機過濾。
+* 改善備份資料偵測與還原流程。
+* 支援 Windows 7 / 10 / 11。
 
-### 🚀 使用方式
+### v1.1.1.0
 
-#### 備份
+* 共享印表機 `\\server\share` 還原時，新增三種模式可選：
+  * 原始連接
+  * Local Port
+  * LPR Port
+* 共享印表機還原前會先安裝備份的驅動程式，再進行後續連接或建立。
+* 改善共享印表機的路徑解析。
+* 調整 Local Port 與 LPR Port 的還原流程。
+* 發布已簽章的可攜式執行檔。
 
-1. 以 **系統管理員身分** 執行工具。
-2. 選擇 `備份本機印表機`。
-3. 工具會自動掃描可備份的印表機並建立 `PrinterBackup` 資料夾。
-4. 完成後可將整個備份資料夾複製到另一台電腦。
+## 功能特色
 
-#### 還原
+* 原生 C++ 實作
+* 輕量化單一執行檔
+* 無需安裝，可攜式工具
+* 備份本機實體印表機
+* 還原印表機到另一台 Windows 電腦
+* 備份印表機驅動程式
+* 備份 TCP/IP、USB、Local Port、LPR Port 連接埠資訊
+* 備份印表機偏好設定
+* 還原印表機偏好設定
+* 可盡可能還原原本的預設印表機
+* 可選擇要備份或還原的印表機
+* 顯示印表機名稱、驅動 / 型號、連接埠資訊
+* 自動略過常見虛擬印表機
+* 支援繁體中文與英文介面
+* 設計給 Windows 7 / 10 / 11 使用
 
-1. 在目標電腦上以 **系統管理員身分** 執行工具。
-2. 確認 `PrinterBackup` 資料夾放在工具旁邊。
-3. 選擇 `還原印表機設定到本機`。
-4. 先勾選要還原的印表機，必要時指定預設印表機。
-5. 若為共享印表機，可依需求選擇原始連接、Local Port 或 LPR Port 方式還原。
-6. 工具會盡可能還原印表機、連接埠、驅動程式、印表機設定與預設印表機。
+## 使用方式
 
-### 📦 下載
+### 1. 使用系統管理員身分執行
 
-目前版本：`v1.1.1.0`
+請使用 **系統管理員身分** 執行 `PrtEasyBAK.exe`。
 
-- [前往 Releases / 發行版本頁面](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
-- [直接下載 PrtBAK_BackupRestore_v1.1.1.0.exe](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.1.1.0/PrtBAK_BackupRestore_v1.1.1.0.exe)
+印表機備份與還原操作可能需要系統管理員權限。
 
-### ⚠️ 注意事項
+### 2. 選擇要執行的功能
 
-- 必須以系統管理員權限執行。
-- 部分印表機設定仍可能受到驅動程式版本與 Windows 版本影響。
-- USB 印表機在還原後，可能仍需要重新插拔或手動確認 USB 連接埠。
-- 網路共用印表機可能需要原始列印伺服器仍可連線。
-- 本工具主要設計給實體印表機備份、移機與 IT 維護用途使用。
+在主畫面選擇要執行的功能：
 
-### 📄 授權
+* **備份**：備份本機印表機。
+* **還原**：從 `PrinterBackup` 還原到本機。
+* **取消**：離開程式。
 
-MIT License
+### 3. 備份本機印表機
 
----
+進行備份時，工具會列出可備份的本機實體印表機。
 
-## 🇺🇸 English Introduction
+常見虛擬印表機會自動略過，不會出現在清單中。
 
-**Windows Printer Backup Restore** is a lightweight utility for backing up and restoring local Windows printers. It is designed for **IT administrators**, **support engineers**, and users who need to migrate printer settings from one Windows computer to another.
+使用者可在備份前勾選要備份的印表機。
 
-The tool can back up printer drivers, ports, printer preferences, and the original default printer, then restore them on another Windows PC as automatically as possible.
+備份內容包含：
 
-### ✨ Key Features
+* 印表機名稱
+* 驅動 / 型號
+* 連接埠資訊
+* 印表機偏好設定
+* 預設印表機資訊
 
-- **Backup local physical printers**: Automatically backs up installed physical printers.
-- **Restore on another Windows PC**: Move the backup folder to another computer and restore from it.
-- **Backup drivers and ports**: Includes printer drivers and TCP/IP, USB, Local Port, and LPR Port information.
-- **Backup printer settings**: Supports exporting and importing printer preferences.
-- **Restore default printer**: Records the original default printer during backup and restores it when possible.
-- **Bilingual interface**: Supports Traditional Chinese and English, with automatic default language detection based on the system UI language.
-- **Selectable restore list**: Choose which printers to restore before the restore process starts.
-- **Model and port display**: The restore list shows printer name, model or driver, and port.
-- **Default printer choice**: You can mark one restored printer as the default printer, or leave the current system default unchanged.
-- **Three restore modes for shared printers**: For `\\server\share` printers, choose Original connection, Local Port, or LPR Port during restore.
-- **Skip common virtual printers**: Such as Microsoft Print to PDF, OneNote, and Adobe PDF.
-- **Network-path friendly**: Can run from a shared network path for both backup and restore.
-- **Digitally signed EXE**: Includes a digitally signed portable executable.
+### 4. 還原印表機
 
-### 🆕 Today's Update
+若要將印表機還原到另一台電腦：
 
-Updated on `2026-06-02`
+1. 將整個 `PrinterBackup` 資料夾複製到目標電腦。
+2. 將 `PrinterBackup` 資料夾放在 `PrtEasyBAK.exe` 旁邊。
+3. 使用系統管理員身分執行 `PrtEasyBAK.exe`。
+4. 選擇 **還原**。
+5. 勾選要還原的印表機。
+6. 確認後開始還原。
 
-- Added three restore modes for shared `\\server\share` printers: Original connection, Local Port, and LPR Port.
-- Shared-printer restore now installs the backed-up driver first before connecting or building the printer.
-- Improved shared-printer path handling so the original server and share name are used more accurately.
-- Adjusted the Local Port and LPR Port restore flow to improve shared-printer recovery on another PC.
-- Released the digitally signed `v1.1.1.0` EXE.
+## 備份資料夾
 
-### 🚀 Usage
+本工具會建立並使用下列資料夾：
 
-#### Backup
+```text
+PrinterBackup
+```
 
-1. Run the tool as **Administrator**.
-2. Choose `備份本機印表機`.
-3. The tool scans eligible printers and creates a `PrinterBackup` folder.
-4. Copy the backup folder to another computer if needed.
+將備份資料移到其他電腦時，請保留整個 `PrinterBackup` 資料夾。
 
-#### Restore
+## 支援備份的印表機資訊
 
-1. Run the tool as **Administrator** on the target computer.
-2. Make sure the `PrinterBackup` folder is placed next to the tool.
-3. Choose `還原印表機設定到本機`.
-4. Select the printers you want to restore and choose a default printer if needed.
-5. For shared printers, choose Original connection, Local Port, or LPR Port as needed.
-6. The tool restores printers, ports, drivers, printer settings, and the default printer as much as possible.
+本工具會盡可能備份與還原下列印表機資訊：
 
-### 📦 Download
+* 印表機驅動程式
+* 印表機連接埠
+* TCP/IP 印表機連接埠資訊
+* USB 印表機連接埠資訊
+* Local Port 資訊
+* LPR Port 資訊
+* 印表機偏好設定
+* 預設印表機資訊
 
-Current version: `v1.1.1.0`
+## 畫面截圖
 
-- [Open the Releases page](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
-- [Download PrtBAK_BackupRestore_v1.1.1.0.exe directly](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/download/v1.1.1.0/PrtBAK_BackupRestore_v1.1.1.0.exe)
+### 繁體中文介面
 
-### ⚠️ Notes
+![Windows Printer Backup Restore 繁體中文介面](assets/screenshots/screenshot-zh-tw1.png)
 
-- Administrator permission is required.
-- Some printer preferences may still depend on the printer driver version and Windows version.
-- USB printers may still need to be reconnected or manually confirmed after restore.
-- Network shared printers may require the original print server to remain available.
-- This tool is mainly intended for physical printer migration, backup, and IT maintenance use.
+![Windows Printer Backup Restore 繁體中文介面](assets/screenshots/screenshot-zh-tw2.png)
 
-### 📄 License
+## 下載
 
-MIT License
+* 發行版本頁面：[Releases](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases)
+* 最新版本：[Windows Printer Backup Restore v1.2.0.0](https://github.com/Terence0816/Windows-Printer-Backup-Restore/releases/tag/v1.2.0.0)
+
+Release assets 通常包含：
+
+```text
+PrtEasyBAK.exe
+PrtEasyBAK.exe.sha256.txt
+```
+
+## SHA-256
+
+```text
+PrtEasyBAK.exe
+342edbf44e721f13c4f2a20fefee82beb40f620a70d4267199cd58bf97a3fe4d
+```
+
+## 注意事項
+
+* 請使用系統管理員身分執行本程式。
+* 建議大量部署前，先於目標環境進行測試。
+* 部分印表機偏好設定可能會受到驅動程式版本與 Windows 版本影響。
+* USB 印表機還原後，可能仍需要重新插拔或手動確認 USB 連接埠。
+* 網路共用印表機可能需要原始列印伺服器仍可連線。
+* 因為這是新發行的執行檔，Windows Defender SmartScreen 或部分防毒軟體可能會顯示不常見程式提醒。
+* 請只從官方 GitHub Releases 頁面下載。
+
+## 搜尋關鍵字
+
+Windows 印表機備份、Windows 印表機還原、印表機移機工具、印表機備份還原、印表機驅動備份、印表機連接埠備份、印表機偏好設定備份、印表機偏好設定還原、PrinterBackup、TCP/IP 印表機備份、USB 印表機備份、Local Port 印表機、LPR Port 印表機、Windows 7 印表機備份、Windows 10 印表機備份、Windows 11 印表機備份、MSP 印表機工具、IT 印表機維護
+
+## 免責聲明
+
+本工具依現況提供。
+
+作者不保證所有印表機、驅動程式與 Windows 環境皆能完整相容。
+
+請僅在您擁有或被授權維護的電腦上使用本工具。
+
+## 授權
+
+本專案使用 MIT License 授權。請參考 [LICENSE](LICENSE)。
